@@ -32,7 +32,7 @@ export default function Header() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Cart<i className="bi bi-cart3"></i></a>
+              <a className="nav-link" href="#">Cart(0)<i className="bi bi-cart3"></i></a>
             </li>
 
             <li className="nav-item dropdown">
