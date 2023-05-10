@@ -14,7 +14,7 @@ export default function Header() {
     <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div className="container-fluid">
 
-    <NavLink className="navbar-brand" exact to="/Home">P<img className="mx-0"src="https://img.icons8.com/?size=512&id=45674&format=png" style={{width:'30px',  height:'30px'}}  alt="..."/>kéSt<img className="mx-0"src="https://img.icons8.com/?size=512&id=45674&format=png" style={{width:'30px',  height:'30px'}}  alt="..."/>re
+    <NavLink className="navbar-brand" exact to="/Home">P<img className="mx-0"src="https://img.icons8.com/?size=512&id=45674&format=png" style={{width:'30px',  height:'30px'}}  alt="..."/>kéSt<img className="mx-0"src="https://img.icons8.com/?size=512&id=45674&format=png" style={{width:'30px',  height:'30px',transform: 'rotate(180deg)'}}  alt="..."/>re
     </NavLink>
 
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
