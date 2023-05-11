@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import Header from './Component/Header.js'
 import Body from './Component/Body.js'
+import Cart from './Component/Cart.js'
 import {Route ,Routes, Switch,NavLink,Link } from 'react-router-dom';
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
 
         <Route exact path="/" element={<Body/>} />
         <Route path="/Home" element={<Body/>} />
-        <Route path="/Cart" element={<Body/>} />
+        <Route path="/Cart" element={<Cart/>} />
         <Route path="*" element={<Body/>} />
 
 </Routes>

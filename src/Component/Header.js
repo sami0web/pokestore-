@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Pokeballe from './Pokeballe.js'
 
 export default function Header() {
   
@@ -11,10 +12,10 @@ export default function Header() {
 
   return (
     
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark     sticky-top     ">
     <div className="container-fluid">
 
-    <NavLink className="navbar-brand" exact to="/Home">P<img className="mx-0"src="https://img.icons8.com/?size=512&id=45674&format=png" style={{width:'30px',  height:'30px'}}  alt="..."/>kéSt<img className="mx-0"src="https://img.icons8.com/?size=512&id=45674&format=png" style={{width:'30px',  height:'30px',transform: 'rotate(180deg)'}}  alt="..."/>re
+    <NavLink className="navbar-brand" exact to="/Home">P{<Pokeballe sens="+"/>}kéSt{<Pokeballe sens="-"/>}re
     </NavLink>
 
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,11 +29,11 @@ export default function Header() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <NavLink className="nav-link active" aria-current="page"  exact to="/Home">Home</NavLink>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#">Cart(0)<i className="bi bi-cart3"></i></a>
+              <NavLink className="nav-link"  exact to="/Cart">Cart(0)<i className="bi bi-cart3"></i></NavLink>
             </li>
 
             <li className="nav-item dropdown">

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { store } from './Component/store';
+import  store  from './Component/store';
 import { Provider } from 'react-redux';
 
 
@@ -13,11 +13,13 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-
+  
 <BrowserRouter>
   <StrictMode>
+  <Provider store={store}>
     <App />
+    </Provider>
   </StrictMode>
   </BrowserRouter>
-
+  
 );

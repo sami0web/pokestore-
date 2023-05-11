@@ -1,10 +1,6 @@
 import React from "react";
-// ES6 Modules or TypeScript
-import Swal from 'sweetalert2'
-
-// CommonJS
-const Swal = require('sweetalert2')
-
+import { useSelector,useDispatch } from 'react-redux';
+import { AddItem, RemoveItem } from './Slice'
 
 
 
@@ -13,14 +9,9 @@ const Swal = require('sweetalert2')
 export default function Card(props) {
   let Price;
 
-  const add=()=> {Swal.fire({
-    position: 'top-end',
-    icon: 'success',
-    title: 'Your work has been saved',
-    showConfirmButton: false,
-    timer: 1500
-  })}
+  const add=(x)=> dispatch(AddItem(x))
 
+  const dispatch = useDispatch()
   return (
    
      
@@ -40,7 +31,7 @@ export default function Card(props) {
   <h6>Price: ${Price=props.stats.attack*2+props.stats.defense*3+props.stats.speed}</h6>
   
   
-    <button className="btn btn-primary  " onClick ={add}  >add to cart    <i class="bi bi-cart"></i></button>
+    <button className="btn btn-primary  " onClick ={()=>add(props)}  >add to cart    <i class="bi bi-cart"></i></button>
   </div>
 </div>
 
