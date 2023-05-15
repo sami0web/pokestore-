@@ -10,7 +10,7 @@ export default function Body() {
 
 
   useEffect(() => {
-    fetch('https://pokebuildapi.fr/api/v1/pokemon/limit/20')
+    fetch('https://pokebuildapi.fr/api/v1/pokemon/limit/2')
       .then(response => response.json())
       .then(data => setPokemon(data));
      
@@ -36,8 +36,8 @@ export default function Body() {
         <div   className="col-md-3 mb-3 mx-auto "key={index} >
           <Card  id= {index} Name ={poke.name} img={poke.image}  stats={poke.stats} Quantiti={poke.q} /> 
           
-          </div>
-        ))}    
+          </div> 
+        ))}   
              
              </div>
 
@@ -46,6 +46,17 @@ export default function Body() {
    
     </div>
 
+    <div   className="col-md-3 mb-3 mx-auto" >
+    <div className="card-body Larger shadow
+">
+    <button type="button" class="btn  btn-lg left ">Précédent</button>
+    <button type="button" class="btn  btn-lg  ">Suivant</button>
+    </div>
+ 
+
+    
+   
+    </div>
     </>
   );
 }
